@@ -1,5 +1,5 @@
 name: "PR build"
-run-name: "Build Pull Request #${{ github.event.pull_request_target.number }}"
+run-name: "Build Pull Request #${{ github.event.pull_request.number }}"
 
 on:
     pull_request_target:
@@ -16,4 +16,4 @@ jobs:
      - run: echo ${{github.event.pull_request.number}}
      - run: echo ${{github.event.number}}
      - run: echo ${{ github.event.head_commit.message }}
-     - run: echo ${{ github.event.pull_request_target.head_commit.message }}
+     - run: echo ${{ github.event.pull_request.head_commit.message }}
